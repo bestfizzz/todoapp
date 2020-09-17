@@ -2,7 +2,7 @@ const component={}
 component.registerPage=`
 <div class="register-container">
 <form id="register-form">
-    <div class="register-header">MindX chat</div>
+    <div class="register-header">To do app</div>
         <div class="name-wrapper">
         <div class="input-wrapper">
             <input type="text" placeholder="First name" name='firstName'>
@@ -31,8 +31,7 @@ component.registerPage=`
     </div>
 </form>
 </div> 
-`
-component.loginPage=`
+
 <div class="login-container">
 <form id="login-form">
     <div class="login-header">To Do List</div>
