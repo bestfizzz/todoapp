@@ -15,12 +15,6 @@ view.setActiveScreen = (screenName, fromCreateConversation = false) => {
                 }
                 controler.register(data)
             })
-            document.getElementById('redirect-to-login').addEventListener('click', () => {
-                view.setActiveScreen('loginPage')
-            })
-            break;
-        case 'loginPage':
-            document.getElementById('app').innerHTML = component.loginPage
             const loginForm = document.getElementById('login-form')
             loginForm.addEventListener('submit', (e) => {
                 e.preventDefault()
@@ -30,10 +24,7 @@ view.setActiveScreen = (screenName, fromCreateConversation = false) => {
                 }
                 controler.login(data)
             })
-            document.getElementById('redirect-to-register').addEventListener('click', () => {
-                view.setActiveScreen('registerPage')
-            })
-            break;
+            break;  
         case 'toDoPage':
             document.getElementById('app').innerHTML = component.toDoPage
             const sendMessageForm = document.getElementById('send-message-form')
