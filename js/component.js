@@ -1,53 +1,37 @@
 const component={}
 component.registerPage=`
-<div class="register-container">
-<form id="register-form">
-    <div class="register-header">To do app</div>
-        <div class="name-wrapper">
-        <div class="input-wrapper">
-            <input type="text" placeholder="First name" name='firstName'>
-            <div class="error" id="first-name-error"></div>
-        </div>
-        <div class="input-wrapper">
-            <input type="text" placeholder="Last name" name="lastName">
-            <div class="error" id="last-name-error"></div>
-    </div>
-    </div>
-    <div class="input-wrapper">
-        <input type="email" placeholder='Email' name="email">
-        <div class="error" id="email-error"></div>    
-    </div>
-    <div class="input-wrapper">
-        <input type="password" placeholder="Password" name="password">
-        <div class="error" id="password-error"></div>
-    </div>
-    <div class="input-wrapper">
-        <input type="password" placeholder="Confirm password" name="confirmPassword">
-        <div class="error" id="confirm-password-error"></div>
-    </div>
-    <div class="form-action">
-        <div>Already have an account?<span class="cursor-pointer" id='redirect-to-login'>Login</span></div>
-        <button type="submit" class="btn cursor-pointer">register</button>
-    </div>
-</form>
-</div> 
-
-<div class="login-container">
-<form id="login-form">
-    <div class="login-header">To Do List</div>
-    <div class="input-wrapper">
-        <input type="email" placeholder='Email' name="email">
-        <div class="error" id="email-error"></div>    
-    </div>
-    <div class="input-wrapper">
-        <input type="password" placeholder="Password" name="password">
-        <div class="error" id="password-error"></div>
-    </div>
-    <div class="form-action">
-        <div>Don't have an account?<span class="cursor-pointer" id='redirect-to-register'>Register</span></div>
-        <button type="submit" class="btn cursor-pointer">sign in</button>
-    </div>
-</form>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+        <form id="register-form">
+			<h1>Create Account</h1>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+        <form id="login-form">
+			<h1>Sign in</h1>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>Already have an acount?</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Don't have an acount?</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
 </div>
     `
 const toDoPage=`

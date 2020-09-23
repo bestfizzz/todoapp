@@ -1,8 +1,17 @@
-const view={}
-view.setActiveScreen = (screenName, fromCreateConversation = false) => {
+const view = {}
+view.setActiveScreen = (screenName) => {
     switch (screenName) {
         case 'registerPage':
             document.getElementById('app').innerHTML = component.registerPage
+            const signUpButton = document.getElementById('signUp')
+            const signInButton = document.getElementById('signIn')
+            const container = document.getElementById('container')
+            signUpButton.addEventListener('click', () => {
+                container.classList.add("right-panel-active");
+            })
+            signInButton.addEventListener('click', () => {
+                container.classList.remove("right-panel-active");
+            })
             const registerForm = document.getElementById('register-form')
             registerForm.addEventListener('submit', (e) => {
                 e.preventDefault()
@@ -13,7 +22,7 @@ view.setActiveScreen = (screenName, fromCreateConversation = false) => {
                     password: registerForm.password.value,
                     confirmPassword: registerForm.confirmPassword.value,
                 }
-                controler.register(data)
+                controller.register(data)
             })
             const loginForm = document.getElementById('login-form')
             loginForm.addEventListener('submit', (e) => {
@@ -22,45 +31,11 @@ view.setActiveScreen = (screenName, fromCreateConversation = false) => {
                     email: loginForm.email.value,
                     password: loginForm.password.value,
                 }
-                controler.login(data)
+                controller.login(data)
             })
-            break;  
+            break;
         case 'toDoPage':
             document.getElementById('app').innerHTML = component.toDoPage
-            const sendMessageForm = document.getElementById('send-message-form')
-            sendMessageForm.addEventListener('submit', (e) => {
-                e.preventDefault()
-                const message = {
-                    content: sendMessageForm.message.value,
-                    owner: model.currentUser.email,
-                    createdAt: new Date().toISOString()
-                }
-                if (!(message.content.trim() === '')) {
-                    model.addMessage(message)
-                    sendMessageForm.message.value = ''
-                }
-            })
-            document.querySelector('#send-message-form input').addEventListener('click', () => {
-                view.hideNotification(model.currentConversation.id)
-            })
-            const addUserForm = document.getElementById('add-user-form')
-            addUserForm.addEventListener('submit', (e) => {
-                e.preventDefault()
-                const email = addUserForm.email.value
-                controler.addUser(email)
-                addUserForm.email.value = ''
-            }
-            )
-            document.getElementById('create-conversation').addEventListener('click', () => {
-                view.setActiveScreen('createConversationPage')
-            })
-            if (fromCreateConversation) {
-                view.showCurrentConversation()
-                view.showConversations()
-            } else {
-                model.getConversations()
-                model.listenConversationChange()
-            }
             break;
     }
 }
