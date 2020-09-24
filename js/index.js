@@ -8,7 +8,7 @@ window.onload = () => {
         messagingSenderId: "1022767435245",
         appId: "1:1022767435245:web:249f2eb891b87c5a83ebe4"
     };
-    // firebase.initializeApp(firebaseConfig);
+       firebase.initializeApp(firebaseConfig);
     // firebase.auth().onAuthStateChanged((user) => {
     //     if (user) {
     //         model.currentUser = {
