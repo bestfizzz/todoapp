@@ -1,9 +1,10 @@
 model={}
+model.currentUser=undefined
 model.register = async (data) => {
     try {
         await firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
         firebase.auth().currentUser.updateProfile({
-            displayName: data.firstName + ' ' + data.lastName
+            displayName: data.name
         })
         firebase.auth().currentUser.sendEmailVerification()
     } catch (err) {

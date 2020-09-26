@@ -16,11 +16,9 @@ view.setActiveScreen = (screenName) => {
             registerForm.addEventListener('submit', (e) => {
                 e.preventDefault()
                 const data = {
-                    firstName: registerForm.firstName.value,
-                    lastName: registerForm.lastName.value,
+                    name:registerForm.name.value,
                     email: registerForm.email.value,
                     password: registerForm.password.value,
-                    confirmPassword: registerForm.confirmPassword.value,
                 }
                 controller.register(data)
             })
@@ -39,3 +37,6 @@ view.setActiveScreen = (screenName) => {
             break;
     }
 }
+// view.setErrorMessage = (elementId, context) => {
+//     document.getElementById(elementId).innerText = context
+// }

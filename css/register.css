@@ -1,11 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-* {
-	box-sizing: border-box;
-}
-
-body {
+.main{
     background-image: url(../img/bg1.jpg);
     background-size: cover;
 	display: flex;
@@ -14,7 +9,6 @@ body {
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	margin: -20px 0 50px;
 }
 
 h1 {

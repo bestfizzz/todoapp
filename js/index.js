@@ -9,21 +9,21 @@ window.onload = () => {
         appId: "1:1022767435245:web:249f2eb891b87c5a83ebe4"
     };
     firebase.initializeApp(firebaseConfig);
-    // firebase.auth().onAuthStateChanged((user) => {
-    //     if (user) {
-    //         model.currentUser = {
-    //             displayName: user.displayName,
-    //             email: user.email
-    //         }
-    //         if (user.emailVerified) {
-    //             view.setActiveScreen('appPage')
-    //         } else {
-    //             alert('Please')
-    //             firebase.auth().signOut()
-    //             view.setActiveScreen('registerPage')
-    //         }
-    //     } else {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            model.currentUser = {
+                displayName: user.displayName,
+                email: user.email
+            }
+            if (user.emailVerified) {
+                view.setActiveScreen('appPage')
+            } else {
+                alert('Please')
+                firebase.auth().signOut()
+                view.setActiveScreen('registerPage')
+            }
+        } else {
             view.setActiveScreen('registerPage')
-    //     }
-    // })
+        }
+    })
 }

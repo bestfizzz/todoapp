@@ -1,20 +1,21 @@
 const component={}
 component.registerPage=`
+<div class="main">
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
         <form id="register-form">
 			<h1>Create Account</h1>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="text" placeholder="Name" name='name'/>
+			<input type="email" placeholder="Email" name='email'/>
+			<input type="password" placeholder="Password" name='password'/>
 			<button>Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
         <form id="login-form">
 			<h1>Sign in</h1>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="email" placeholder="Email" name='email'/>
+			<input type="password" placeholder="Password" name='password'/>
 			<button>Sign In</button>
 		</form>
 	</div>
@@ -32,6 +33,7 @@ component.registerPage=`
 			</div>
 		</div>
 	</div>
+</div>
 </div>
     `
 const toDoPage=`
