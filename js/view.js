@@ -35,8 +35,46 @@ view.setActiveScreen = (screenName) => {
         case 'toDoPage':
             document.getElementById('app').innerHTML = component.toDoPage
             break;
+        case 'mobileSignIn':
+            document.getElementById('app').innerHTML=component.mobileSignIn
+            const loginForm2 = document.getElementById('login-form')
+            loginForm2.addEventListener('submit', (e) => {
+                e.preventDefault()
+                const data = {
+                    email: loginForm2.email.value,
+                    password: loginForm2.password.value,
+                }
+                controller.login(data)
+            })
+            const redirectToSignUp=document.getElementById('redirect-to-sign-up')
+            redirectToSignUp.addEventListener('click',()=>{
+                view.setActiveScreen('mobileSignUp')
+            })
+            break;
+        case 'mobileSignUp':
+            document.getElementById('app').innerHTML=component.mobileSignUp
+            const redirectToSignIn=document.getElementById('redirect-to-sign-in')
+            redirectToSignUp.addEventListener('click',()=>{
+                view.setActiveScreen('mobileSignIn')})
+            const registerForm2 = document.getElementById('register-form')
+            registerForm2.addEventListener('submit', (e) => {
+                e.preventDefault()
+                const data = {
+                    name:registerForm2.name.value,
+                    email: registerForm2.email.value,
+                    password: registerForm2.password.value,
+                }
+                controller.register(data)
+            })
+            break;
     }
 }
-// view.setErrorMessage = (elementId, context) => {
-//     document.getElementById(elementId).innerText = context
-// }
+
+view.setErrorMessage = (elementId) => {
+    const target=document.getElementById(elementId)
+    target.classList.replace("invisible","red")
+}
+view.removeErrorMessage = (elementId) => {
+    const target=document.getElementById(elementId)
+    target.classList.replace("red","invisible")
+}

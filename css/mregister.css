@@ -1,5 +1,4 @@
 @media screen and (max-width:425px){
-    .login-container #login-form{
+    .register-container #register-form{
         width: 100%;
     }
-}

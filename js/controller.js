@@ -1,37 +1,32 @@
 const controller={}
 controller.register = (data) => {
     console.log(data.password)
-    // if (data.firstName === '') {
-    //     view.setErrorMessage('first-name-error', 'Please input your first name')
-    // }
-    // else {
-    //     view.setErrorMessage('first-name-error', '')
-    // }
-    // if (data.lastName === '') {
-    //     view.setErrorMessage('last-name-error', 'Please input your last name')
-    // }
-    // else {
-    //     view.setErrorMessage('last-name-error', '')
-    // }
-    // if (data.firstName === '') {
-    //     view.setErrorMessage('email-error', 'Please input your email')
-    // }
-    // else {
-    //     view.setErrorMessage('email-error', '')
-    // }
-    // if (data.password === '') {
-    //     view.setErrorMessage('password-error', 'Please input your password')
-    // }
-    // else {
-    //     view.setErrorMessage('password-error', '')
-    // }
-    if (data.firstName !== '' && data.lastName !== '' && data.email !== '' && data.password !== '') {
+    if (data.name === '') {
+        view.setErrorMessage('name-error')
+    }
+    else {
+        view.removeErrorMessage('name-error')
+    }
+    if (data.email === '') {
+        view.setErrorMessage('email-error')
+    }
+    else {
+        view.removeErrorMessage('email-error')
+    }
+    if (data.password === '') {
+        view.setErrorMessage('password-error')
+    }
+    else {
+        view.removeErrorMessage('password-error')
+    }
+    if (data.name !== '' && data.email !== '' && data.password !== '') {
         model.register(data);
     }
 }
 controller.login = ({ email, password }) => {
-    view.setErrorMessage('email-error', email === '' ? 'Please input your email' : '')
-    view.setErrorMessage('password-error', password === '' ? 'Please input your password' : '')
+    console.log(email)
+    if(email==''){view.setErrorMessage('email2-error')}
+    if(password==''){view.setErrorMessage('password2-error')}
     if (email !== '' && password !== '') {
         model.login({ email, password })
     }

@@ -1,5 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+.red{
+	color: #eb2f0e;
+}
+.invisible{
+	color: transparent;
+	font-size: smaller;
+}
 .main{
     background-image: url(../img/bg1.jpg);
     background-size: cover;

@@ -1,0 +1,10 @@
+.aside-left{
+    width: 15%;
+    height: 100%;
+    border-right: 1px solid #ddbbdd;
+}
+.aside-right{
+    border-left: 1px solid #dbdbdb;
+    width: 15%;
+    padding:10px;
+}
