@@ -76,5 +76,65 @@ component.mobileSignIn=`
 </div>
 `
 component.toDoPage=`
-	<div>something</div>
+<div class="toDoPageContainer">
+<div class="main">
+	<div class="aside-left">
+		<div class="all-task">
+			<h2 class="task-list-title">My list</h2>
+			<ul class="active-list">
+				<li class="active-list">Youtube</li>
+				<li>work</li>
+				<li>Grory</li>
+			</ul>
+			<form  class = "add-text-form"action="">
+				<input type="text" class="new list" placeholder="new list name" aria-label="new list name"> 
+				<button class="btn list" aria-label="create new list">+</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="todo-list">
+		<div class="todo-header">
+			<h2 class="list-title">My day</h2>
+			
+		</div>
+		<div class="todo-body">
+			<div class="tasks">
+				<!-- task 1 -->
+				<div class="task">
+					<input type="checkbox" id ="task-1">
+					<label for="task-1">
+						<span class="custom-checkbox"></span>
+						record todolist video</label>
+				</div>
+				<!-- task 2 -->
+				<div class="task">
+					<input type="checkbox" id ="task-2">
+					<label for="task-2">
+						<span class="custom-checkbox"></span>
+						another task</label>
+				</div>
+				<!-- task 3 -->
+				<div class="task">
+					<input type="checkbox" id ="task-3">
+					<label for="task-3">
+						<span class="custom-checkbox"></span>
+						a third task</label>
+				</div>
+			</div>
+			<div class="new-task-creator">
+				<form class="add-text-form" action="">
+					<input type="text" class="new list" placeholder="new task name" aria-label="new task name"> 
+					<button class="btn task" aria-label="create new list">+</button>
+				</form>
+			</div>
+
+			<div class="delete-stuff">
+				<button class="btn delete">Clear complete tasks</button>
+				<button class="btn delete">Delete list</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
 `
