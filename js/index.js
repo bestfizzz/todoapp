@@ -20,10 +20,21 @@ window.onload = () => {
             } else {
                 alert('Please')
                 firebase.auth().signOut()
-                view.setActiveScreen('registerPage')
+                window.matchMedia("(max-width: 600px)").addListener((e) => {
+                    if (e.matches) {
+                        view.setActiveScreen('mobileSignUp')
+                    }else {
+                        view.setActiveScreen('registerPage')
+                    }
+            })
             }
         } else {
-            view.setActiveScreen('registerPage')
-        }
-    })
+            window.matchMedia("(max-width: 600px)").addListener((e) => {
+                if (e.matches) {
+                    view.setActiveScreen('mobileSignUp')
+                }else {
+                    view.setActiveScreen('registerPage')
+                }
+        })
+    }
 }
