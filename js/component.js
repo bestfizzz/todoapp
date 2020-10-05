@@ -54,7 +54,7 @@ component.mobileSignUp=`
         <div class="invisible" id="password-error">Please input your password</div>  
     <div class="form-action">
         <div>Already have an account?<span class="cursor-pointer" id='redirect-to-login'>Sign in</span></div>
-        <button type="submit" class="btn cursor-pointer">Sign up</button>
+        <button type="submit" class="cursor-pointer">Sign up</button>
     </div>
 </form>
 </div> 
@@ -69,7 +69,7 @@ component.mobileSignIn=`
         <div class="invisible" id="password2-error">Please input your password</div>
     <div class="form-action">
         <div>Don't have an account?<span class="cursor-pointer" id='redirect-to-register'>Sign up</span></div>
-        <button type="submit" class="btn cursor-pointer">Sign in</button>
+        <button type="submit" class="cursor-pointer">Sign in</button>
     </div>
 </form>
 </div>

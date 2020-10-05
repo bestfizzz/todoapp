@@ -27,8 +27,6 @@ controller.login = ({ email, password }) => {
     console.log(email)
     if(email==''){view.setErrorMessage('email2-error')}
     if(password==''){view.setErrorMessage('password2-error')}
-    if(email==''){view.setErrorMessage('email-error')}
-    if(password==''){view.setErrorMessage('password-error')}
     if (email !== '' && password !== '') {
         model.login({ email, password })
     }
