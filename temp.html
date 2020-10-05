@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to do</title>
+	<title>to do</title>
+	<link rel="stylesheet" href="./css/mregister.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/register.css">
     <link rel="stylesheet" href="./css/todo.css">
 </head>
 <body>
-	<div class="to-do-app-container">
-		<div class="aside-left"></div>
-		<div class="to-do-list"></div>
-		<div class="aside-right"></div>
-	
-	<div class="toDoPage-container">
-		<div class="aside-left">
-
-		</div>
-
-		<div class="main">
-
-		</div>
-		
-		<div class="aside-right">
-
-		</div>
-	</div>
+	<div class="register-container">
+		<form id="register-form">
+			<div class="register-header">To Do List</div>
+				<input type="text" placeholder="Name" name='name'>
+				<div class="invisible" id="name-error">Please input your name</div>  
+				<input type="email" placeholder='Email' name="email">
+				<div class="invisible" id="email-error">Please input your email</div>  
+				<input type="password" placeholder="Password" name="password">
+				<div class="invisible" id="password-error">Please input your password</div>  
+			<div class="form-action">
+				<div>Already have an account?<span class="cursor-pointer" id='redirect-to-login'>Login</span></div>
+				<button type="submit" class="btn cursor-pointer">register</button>
+			</div>
+		</form>
+		</div> 
 </body>
 </html>

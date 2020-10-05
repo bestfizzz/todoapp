@@ -6,6 +6,7 @@
 .invisible{
 	color: transparent;
 	font-size: smaller;
+	cursor: none;
 }
 .main{
     background-image: url(../img/bg1.jpg);

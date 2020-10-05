@@ -1,4 +1,15 @@
 @media screen and (max-width:425px){
+    .register-container{
+        background-image: url(../img/bg1.jpg);
+    }
     .register-container #register-form{
-        width: 100%;
+        width: 100%;}
+    .register-container .register-header{
+            font-size:40px;
+            color: #535353;
+            text-align: center;
+            font-weight: 600;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
     }

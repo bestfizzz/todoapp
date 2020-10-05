@@ -39,7 +39,7 @@ component.registerPage=`
 		</div>
 	</div>
 </div>
-<div style="position: absolute; bottom: 0; left: 0; width: 100px; text-align:left;">To Do List</div>
+<div style="position: absolute; bottom: 0; left: 0; width: 100px; text-align:left;font-weight: bold;font-size:large;">To Do List</div>
 </div>
 	`
 component.mobileSignUp=`

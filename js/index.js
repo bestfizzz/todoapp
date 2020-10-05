@@ -10,7 +10,6 @@ window.onload = () => {
     };
     firebase.initializeApp(firebaseConfig);
     firebase.auth().onAuthStateChanged((user) => {
-        const mediaQuery=window.matchMedia('(max-width:768px)')
         if (user) {
             model.currentUser = {
                 displayName: user.displayName,
@@ -21,10 +20,7 @@ window.onload = () => {
             } else {
                 alert('Please')
                 firebase.auth().signOut()
-                // if(){
-                //     view.setActiveScreen('mobileSignIn')
-                // }else{
-                //     view.setActiveScreen('registerPage')}
+                view.setActiveScreen('registerPage')
             }
         } else {
             view.setActiveScreen('registerPage')

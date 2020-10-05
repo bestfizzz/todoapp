@@ -1,5 +1,16 @@
 @media screen and (max-width:425px){
+    .login-container{
+        background-image: url(../img/bg1.jpg);
+    }
     .login-container #login-form{
         width: 100%;
     }
+    .login-container .login-header{
+            font-size:40px;
+            color: #535353;
+            text-align: center;
+            font-weight: 600;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
 }

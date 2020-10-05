@@ -46,14 +46,14 @@ view.setActiveScreen = (screenName) => {
                 }
                 controller.login(data)
             })
-            const redirectToSignUp=document.getElementById('redirect-to-sign-up')
+            const redirectToSignUp=document.getElementById('redirect-to-register')
             redirectToSignUp.addEventListener('click',()=>{
                 view.setActiveScreen('mobileSignUp')
             })
             break;
         case 'mobileSignUp':
             document.getElementById('app').innerHTML=component.mobileSignUp
-            const redirectToSignIn=document.getElementById('redirect-to-sign-in')
+            const redirectToSignIn=document.getElementById('redirect-to-login')
             redirectToSignUp.addEventListener('click',()=>{
                 view.setActiveScreen('mobileSignIn')})
             const registerForm2 = document.getElementById('register-form')
