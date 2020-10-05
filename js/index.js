@@ -20,21 +20,16 @@ window.onload = () => {
             } else {
                 alert('Please')
                 firebase.auth().signOut()
-                window.matchMedia("(max-width: 600px)").addListener((e) => {
-                    if (e.matches) {
-                        view.setActiveScreen('mobileSignUp')
-                    }else {
-                        view.setActiveScreen('registerPage')
-                    }
-            })
+                if(window.matchMedia('(max-width:768px)').matches){
+                    view.setActiveScreen('mobileSignIn')
+                }else{
+                    view.setActiveScreen('registerPage')}
             }
         } else {
-            window.matchMedia("(max-width: 600px)").addListener((e) => {
-                if (e.matches) {
-                    view.setActiveScreen('mobileSignUp')
-                }else {
-                    view.setActiveScreen('registerPage')
-                }
-        })
-    }
+            if(window.matchMedia('(max-width:768px)').matches){
+                view.setActiveScreen('mobileSignIn')
+            }else{
+            view.setActiveScreen('registerPage')}
+        }
+    })
 }
