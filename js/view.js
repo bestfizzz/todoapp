@@ -54,7 +54,7 @@ view.setActiveScreen = (screenName) => {
         case 'mobileSignUp':
             document.getElementById('app').innerHTML=component.mobileSignUp
             const redirectToSignIn=document.getElementById('redirect-to-login')
-            redirectToSignUp.addEventListener('click',()=>{
+            redirectToSignIn.addEventListener('click',()=>{
                 view.setActiveScreen('mobileSignIn')})
             const registerForm2 = document.getElementById('register-form')
             registerForm2.addEventListener('submit', (e) => {

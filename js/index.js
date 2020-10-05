@@ -20,13 +20,13 @@ window.onload = () => {
             } else {
                 alert('Please')
                 firebase.auth().signOut()
-                if(window.matchMedia('(max-width:768px)').matches){
+                if(window.matchMedia('(max-width:600px)').matches){
                     view.setActiveScreen('mobileSignIn')
                 }else{
                     view.setActiveScreen('registerPage')}
             }
         } else {
-            if(window.matchMedia('(max-width:768px)').matches){
+            if(window.matchMedia('(max-width:600px)').matches){
                 view.setActiveScreen('mobileSignIn')
             }else{
             view.setActiveScreen('registerPage')}
