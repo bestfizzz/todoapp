@@ -1,6 +1,5 @@
 const controller={}
 controller.register = (data) => {
-    console.log(data.password)
     if (data.name === '') {
         view.setErrorMessage('name-error')
     }
