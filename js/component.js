@@ -43,6 +43,7 @@ component.registerPage=`
 </div>
 	`
 component.mobileSignUp=`
+<div class="main">
 <div class="register-container">
 <form id="register-form">
     <div class="register-header">To Do List</div>
@@ -53,13 +54,15 @@ component.mobileSignUp=`
         <input type="password" placeholder="Password" name="password">
         <div class="invisible" id="password-error">Please input your password</div>  
     <div class="form-action">
-        <div>Already have an account?<span class="cursor-pointer" id='redirect-to-login'>Sign in</span></div>
+        <div class="smt">Already have an account?<span class="cursor-pointer" id='redirect-to-login'>Sign in</span></div>
         <button type="submit" class="cursor-pointer">Sign up</button>
     </div>
 </form>
 </div> 
+</div>
 `
 component.mobileSignIn=`
+<div class="main">
 <div class="login-container">
 <form id="login-form">
     <div class="login-header">To Do List</div>
@@ -68,10 +71,11 @@ component.mobileSignIn=`
         <input type="password" placeholder="Password" name="password">
         <div class="invisible" id="password2-error">Please input your password</div>
     <div class="form-action">
-        <div>Don't have an account?<span class="cursor-pointer" id='redirect-to-register'>Sign up</span></div>
+        <div class="smt">Don't have an account?   <span class="cursor-pointer" id='redirect-to-register'>Sign up</span></div>
         <button type="submit" class="cursor-pointer">Sign in</button>
     </div>
 </form>
+</div>
 </div>
 `
 component.toDoPage=`
